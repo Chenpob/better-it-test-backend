@@ -6,4 +6,4 @@ const WordSchema = new mongoose.Schema({
     word_type : String
 })
 
-module.exports = mongoose.model('Word', WordSchema)
+module.exports = mongoose.model('word', WordSchema)
