@@ -6,6 +6,9 @@ var logger = require('morgan');
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
+mongoose.connect('mongodb+srv://jienpowg:1234@sumo.sl3ezlt.mongodb.net/?retryWrites=true&w=majority')
+        .then(() => console.log('connect success'))
+        .catch((err) => console.error(err))
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
