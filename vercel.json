@@ -1,14 +1,22 @@
 {
   "builds": [
       {
-          "src": "index.js",
+          "src": "intents.js",
           "use": "@vercel/node"
-      }
+      },
+      {
+        "src": "words.js",
+        "use": "@vercel/node"
+    }
   ],
   "routes": [
       {
         "src": "/(.*)",
-        "dest": "index.js"
+        "dest": "intents.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "words.js"
       }
   ]
 }
